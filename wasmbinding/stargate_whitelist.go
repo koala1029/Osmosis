@@ -14,7 +14,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
 
-	conentratedtypes "github.com/osmosis-labs/osmosis/v15/x/concentrated-liquidity/types"
+	conentratedtypes "github.com/osmosis-labs/osmosis/v15/x/concentrated-liquidity/types/query"
 	downtimequerytypes "github.com/osmosis-labs/osmosis/v15/x/downtime-detector/client/queryproto"
 	gammtypes "github.com/osmosis-labs/osmosis/v15/x/gamm/types"
 	gammv2types "github.com/osmosis-labs/osmosis/v15/x/gamm/v2types"
@@ -98,7 +98,7 @@ func init() {
 	setWhitelistedQuery("/osmosis.gamm.v1beta1.Query/EstimateSwapExactAmountOut", &gammtypes.QuerySwapExactAmountOutResponse{})
 
 	// concentrated liquidity
-	setWhitelistedQuery("/osmosis.concentratedliquidity.v1beta1.QueryPoolRequest", &conentratedtypes.QueryPoolResponse{})
+	setWhitelistedQuery("/osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest", &conentratedtypes.QueryPoolsResponse{})
 
 	// incentives
 	setWhitelistedQuery("/osmosis.incentives.Query/ModuleToDistributeCoins", &incentivestypes.ModuleToDistributeCoinsResponse{})
